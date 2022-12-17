@@ -2,4 +2,4 @@
 
 ## Desploy
 
-https://grid-responsive-no-media-queries.netlify.app/
+https://grid-lightbox.netlify.app
