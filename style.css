@@ -27,4 +27,51 @@ body {
 
 .grid img {
   filter: grayscale(0.9) opacity(0.9);
+  border: 2px solid transparent;
+  transition: all 0.15s ease-in-out;
+}
+
+.grid img:hover,
+.grid img:focus {
+  filter: grayscale(0);
+  opacity: 1;
+  border: 2px solid #000;
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0 0 0 / 80%);
+  display: none;
+}
+
+.lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.8rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+.lightbox img {
+  max-height: 75%;
+  max-width: 75%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
